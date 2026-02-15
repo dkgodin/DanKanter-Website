@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
+import danKanterImg from "../assets/dan-kanter-transparent-bg.png";
 
 const Hero = () => {
   return (
@@ -15,13 +15,14 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">lohit</span>
+            Math & Science Teacher  <span className="text-[#B772FF]"><br />Tech & Safety Lecturer</span>
+            <span className="text-[#915EFF]"><br />Bass Musician</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
+            Reach me out for:
             <Typewriter
               options={{
-                strings: ["CyberSecurity", "Ai & ML", "NLP"],
+                strings: ["Science  & Math Teaching", " Tech & Safety Lecturing ", "Pro Bass Playing"],
                 autoStart: true,
                 loop: true,
                 loopCount: Infinity,
@@ -33,7 +34,15 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <div className={`absolute inset-0 top-[120px] flex justify-end items-center pointer-events-none pr-10`}>
+        <img
+          src={danKanterImg}
+          alt="Dan Kanter"
+          className="w-[58%] h-[58%] xs:w-[66%] xs:h-[66%] sm:w-[76%] sm:h-[76%] lg:w-[80%] lg:h-[80%] object-contain object-right opacity-100 transition-[width,height] duration-300 ease-out"
+        />
+      </div>
+
+
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

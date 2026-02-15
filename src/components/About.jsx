@@ -20,7 +20,7 @@ const ServiceCard = ({ index, title, icon }) => (
         }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img src={icon} alt="web-development" className="w-16 h-16 object-contain" loading="lazy" />
+        <img src={icon} alt="web-development" className="w-48 h-48 object-contain" loading="lazy" />
 
         <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
@@ -33,18 +33,16 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
+        <h2 className={styles.sectionHeadText}>About</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+        I am a science and math teacher with a passion for technology and a love for music.<br></br>
+        I am Lecturer at the Dep. of Safety with vast expperience in multi-disciplinary
+        systems management. <br></br>I am a constant learner and entrepreneur and I professionally play the bass guitar.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
