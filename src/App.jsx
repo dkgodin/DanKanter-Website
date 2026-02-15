@@ -5,6 +5,7 @@ import { About, Contact, Experience, Hero, Navbar, Teaching, Lecturing, PlayingB
 const App = () => {
   return (
     <BrowserRouter
+      basename="/DanKanter-Website"
       future={{
         v7_startTransition: true,
         v7_relativeSplatPath: true,

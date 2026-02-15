@@ -49,6 +49,14 @@ mindmap
 
 Experience the live website at [https://dankanter.com](https://dankanter.com)
 
+## 🌐 GitHub Pages
+
+The site deploys to GitHub Pages via GitHub Actions. **One-time setup:**
+
+1. In the repo: **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main`; the workflow will build and deploy. The site will be at `https://itzik2sh.github.io/DanKanter-Website/`
+
 ## 🛠️ Installation
 
 1️⃣ Clone the repository:
