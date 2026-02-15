@@ -106,7 +106,7 @@ const Contact = () => {
         <div className="flex gap-4 mt-8 mb-4">
           {/* Facebook */}
           <a
-            href="#"
+            href="https://www.facebook.com/share/1GBVCU13iD/"
             className="w-12 h-12 rounded-full flex justify-center items-center bg-[#1877F2] hover:opacity-80 transition-opacity"
             aria-label="Facebook"
           >
@@ -130,7 +130,7 @@ const Contact = () => {
 
           {/* Instagram */}
           <a
-            href="#"
+            href="https://www.instagram.com/dkgodingreengiant/"
             className="w-12 h-12 rounded-full flex justify-center items-center bg-gradient-to-tr from-[#FCAF45] via-[#E1306C] to-[#C13584] hover:opacity-80 transition-opacity"
             aria-label="Instagram"
           >
