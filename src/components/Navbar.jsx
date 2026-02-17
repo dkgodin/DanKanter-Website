@@ -50,8 +50,7 @@ const Navbar = () => {
           >
             <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
             <p className="text-grey-500 text-[20px] font-bold cursor-pointer flex">
-              DAN&nbsp;
-              <span className="sm:block hidden">KANTER</span>
+              DAN KANTER&nbsp;
             </p>
           </Link>
           {renderNavLinks(false)}
