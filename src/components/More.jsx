@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Tilt } from 'react-tilt';
-import { lecturingServices } from '../constants';
+import { playingBassServices } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -28,24 +28,23 @@ const ServiceCard = ({ index, title, icon }) => (
     </Tilt>
 );
 
-const Lecturing = () => {
+const More = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>Managhement College</p>
-                <h2 className={styles.sectionHeadText}>Tech & Safety Lecturing</h2>
+                <p className={styles.sectionSubText}>More</p>
+                <h2 className={styles.sectionHeadText}>Childrens' Books</h2>
             </motion.div>
 
             <motion.p
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                An expeienced multi-disciplinary systems manager, who is a Lecturer at the Dep. of Safety at the management college.<br></br>
-                Teaching various courses related to safety, risk management, and emergency response.
+                Wrote and illustrated 3 childrens' books, published by "Tzameret" publishing.
             </motion.p>
 
             <div className="mt-20 flex flex-wrap gap-10">
-                {lecturingServices.map((service, index) => (
+                {playingBassServices.map((service, index) => (
                     <ServiceCard key={service.title} index={index} {...service} />
                 ))}
             </div>
@@ -53,6 +52,6 @@ const Lecturing = () => {
     );
 };
 
-const WrappedLecturing = SectionWrapper(Lecturing, 'lecturing');
+const WrappedMore = SectionWrapper(More, 'more');
 
-export default WrappedLecturing;
+export default WrappedMore;

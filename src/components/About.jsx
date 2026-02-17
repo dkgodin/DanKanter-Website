@@ -40,9 +40,9 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a science and math teacher with a passion for technology and a love for music.<br></br>
-        I am Lecturer at the Dep. of Safety with vast expperience in multi-disciplinary
-        systems management. <br></br>I am a constant learner and entrepreneur and I professionally play the bass guitar.
+        A science and math teacher with a passion for technology and a love for music.<br></br>
+        A Lecturer at the Dep. of Safety with vast expperience in multi-disciplinary
+        systems management. A constant learner and a professional bass guitarist.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

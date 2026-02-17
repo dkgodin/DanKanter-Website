@@ -18,6 +18,11 @@ import {
   playingBassTechStack3,
   playingBassTechStack4,
   playingBassTechStack5,
+  MoreTechStack1,
+  MoreTechStack2,
+  MoreTechStack3,
+  MoreTechStack4,
+  MoreTechStack5,
   mech,
   mba,
   entrepeneur,
@@ -45,6 +50,10 @@ export const navLinks = [
   {
     id: "playing-bass",
     title: "Playing Bass",
+  },
+  {
+    id: "more",
+    title: "More",
   },
   {
     id: "contact",
@@ -83,6 +92,14 @@ export const playingBassServices = [
   { title: "Playing Bass 5", icon: playingBassTechStack5 },
 ];
 
+export const moreServices = [
+  { title: "More 1", icon: MoreTechStack1 },
+  { title: "More 2", icon: MoreTechStack2 },
+  { title: "More 3", icon: MoreTechStack3 },
+  { title: "More 4", icon: MoreTechStack4 },
+  { title: "More 5", icon: MoreTechStack5 },
+];
+
 export const experiences = [
   {
     title: "Mechanical Engineering",
@@ -113,8 +130,7 @@ export const experiences = [
     iconBg: "#161329",
     date: "",
     points: [
-      "An innovative entrepreneur, with a passion for creativity and innovation in technology.",
-      "",
+      "Innovative Engineer, specializing in Finding Creative Solutions for Complex problems.",
     ],
   },
   {
@@ -124,8 +140,8 @@ export const experiences = [
     iconBg: "#161329",
     date: "",
     points: [
-      "Description point 1.",
-      "Description point 2.",
+      "Playing the bass guitar for more than 5 years.",
+      "Played with various bands (covers & original materials).",
     ],
   },
   {
@@ -135,8 +151,8 @@ export const experiences = [
     iconBg: "#161329",
     date: "",
     points: [
-      "Description point 1.",
-      "Description point 2.",
+      "A Science and Math school teacher, who knows how to blend frontals with laboratories & various exercises.",
+      "Administering students for different science competitions and more.",
     ],
   },
 ];

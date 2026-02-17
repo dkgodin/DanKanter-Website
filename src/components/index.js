@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Teaching from "./Teaching";
 import Lecturing from "./Lecturing";
 import PlayingBass from "./PlayingBass";
+import More from "./More";
 import Contact from "./Contact";
 
 export {
@@ -16,6 +17,7 @@ export {
   Teaching,
   Lecturing,
   PlayingBass,
+  More,
   Contact,
 
 };
