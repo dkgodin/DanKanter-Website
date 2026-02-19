@@ -1,7 +1,6 @@
 import {
   teach,
   lecture,
-  innovate,
   bassIcon,
   teachingTechStack1,
   teachingTechStack2,
@@ -18,6 +17,17 @@ import {
   playingBassTechStack3,
   playingBassTechStack4,
   playingBassTechStack5,
+  playingBassTechStack6,
+  playingBassTechStack7,
+  playingBassTechStack8,
+  playingBassTechStack9,
+  playingBassTechStack10,
+  playingBassTechStack11,
+  playingBassTechStack12,
+  playingBassTechStack13,
+  playingBassTechStack14,
+  playingBassTechStack15,
+  playingBassTechStack16,
   MoreTechStack1,
   MoreTechStack2,
   MoreTechStack3,
@@ -64,7 +74,6 @@ export const navLinks = [
 export const services = [
   { title: "Science And Math Teacher", icon: teach },
   { title: "Tech & Safety Lecturer", icon: lecture },
-  { title: "Entrepreneur", icon: innovate },
   { title: "Bass Player", icon: bassIcon },
 ];
 
@@ -85,11 +94,22 @@ export const lecturingServices = [
 ];
 
 export const playingBassServices = [
-  { title: "Playing Bass 1", icon: playingBassTechStack1 },
-  { title: "Playing Bass 2", icon: playingBassTechStack2 },
-  { title: "Playing Bass 3", icon: playingBassTechStack3 },
-  { title: "Playing Bass 4", icon: playingBassTechStack4 },
-  { title: "Playing Bass 5", icon: playingBassTechStack5 },
+  { title: "Angry Again", icon: playingBassTechStack1 },
+  { title: "Don't Stop Me Now", icon: playingBassTechStack2 },
+  { title: "Drag My Body", icon: playingBassTechStack3 },
+  { title: "I'm Only Happy When It Rains", icon: playingBassTechStack4 },
+  { title: "Maayan", icon: playingBassTechStack5 },
+  { title: "Modern Love", icon: playingBassTechStack6 },
+  { title: "Movies", icon: playingBassTechStack7 },
+  { title: "Ready To Go", icon: playingBassTechStack8 },
+  { title: "Runaway", icon: playingBassTechStack9 },
+  { title: "Shual Bemenusa", icon: playingBassTechStack10 },
+  { title: "Soul To Squeeze", icon: playingBassTechStack11 },
+  { title: "Take Me Out", icon: playingBassTechStack12 },
+  { title: "Take Me Out 2", icon: playingBassTechStack13 },
+  { title: "The Best", icon: playingBassTechStack14 },
+  { title: "This Cold", icon: playingBassTechStack15 },
+  { title: "Watching The Wheels", icon: playingBassTechStack16 },
 ];
 
 export const moreServices = [

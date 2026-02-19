@@ -19,5 +19,4 @@ export {
   PlayingBass,
   More,
   Contact,
-
 };

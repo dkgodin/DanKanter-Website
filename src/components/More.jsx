@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Tilt } from 'react-tilt';
-import { playingBassServices } from '../constants';
+import { moreServices } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -44,7 +44,7 @@ const More = () => {
             </motion.p>
 
             <div className="mt-20 flex flex-wrap gap-10">
-                {playingBassServices.map((service, index) => (
+                {moreServices.map((service, index) => (
                     <ServiceCard key={service.title} index={index} {...service} />
                 ))}
             </div>
