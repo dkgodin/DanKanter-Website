@@ -33,7 +33,7 @@ const PlayingBass = () => {
         <>
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Professional Bands</p>
-                <h2 className={styles.sectionHeadText}>Bass Playing</h2>
+                <h2 className={styles.sectionHeadText}>Playing Bass</h2>
             </motion.div>
 
             <motion.p

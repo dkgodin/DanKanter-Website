@@ -46,8 +46,6 @@ import playingBassTechStack16 from "./playing-bass-tech-stack/watching-the-wheel
 import MoreTechStack1 from "./more-tech-stack/1.png";
 import MoreTechStack2 from "./more-tech-stack/2.png";
 import MoreTechStack3 from "./more-tech-stack/3.png";
-import MoreTechStack4 from "./more-tech-stack/4.png";
-import MoreTechStack5 from "./more-tech-stack/5.png";
 
 // Import common assets
 import logo from "./logo.png";
@@ -92,8 +90,6 @@ export {
   MoreTechStack1,
   MoreTechStack2,
   MoreTechStack3,
-  MoreTechStack4,
-  MoreTechStack5,
   logo,
   menu,
   close,

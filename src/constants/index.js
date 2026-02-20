@@ -31,8 +31,6 @@ import {
   MoreTechStack1,
   MoreTechStack2,
   MoreTechStack3,
-  MoreTechStack4,
-  MoreTechStack5,
   mech,
   mba,
   entrepeneur,
@@ -113,11 +111,9 @@ export const playingBassServices = [
 ];
 
 export const moreServices = [
-  { title: "More 1", icon: MoreTechStack1 },
-  { title: "More 2", icon: MoreTechStack2 },
-  { title: "More 3", icon: MoreTechStack3 },
-  { title: "More 4", icon: MoreTechStack4 },
-  { title: "More 5", icon: MoreTechStack5 },
+  { title: "Cat Wanted Pajamas", icon: MoreTechStack1 },
+  { title: "Drinks Seller & The Horse", icon: MoreTechStack2 },
+  { title: "Dinner Time Sock", icon: MoreTechStack3 },
 ];
 
 export const experiences = [
@@ -154,7 +150,7 @@ export const experiences = [
     ],
   },
   {
-    title: "Bass Playing",
+    title: "Playing Bass",
     company_name: "Playing with bands",
     icon: bass,
     iconBg: "#161329",
