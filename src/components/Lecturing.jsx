@@ -6,7 +6,9 @@ import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ServiceCard = ({ index, title, icon, link }) => {
+const ServiceCard = ({ index, title, icon, link, onClick }) => {
+    const isClickable = Boolean(link || onClick);
+
     const content = (
         <div
             options={{
@@ -14,7 +16,9 @@ const ServiceCard = ({ index, title, icon, link }) => {
                 scale: 1,
                 speed: 450,
             }}
-            className={`bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col ${link ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''}`}
+            className={`bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col ${
+                isClickable ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''
+            }`}
         >
             <img src={icon} alt="web-development" className="w-48 h-48 object-contain" loading="lazy" />
 
@@ -27,11 +31,12 @@ const ServiceCard = ({ index, title, icon, link }) => {
             <motion.div
                 variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
                 className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+                onClick={onClick}
             >
                 {link ? (
-                    <a 
-                        href={link} 
-                        target="_blank" 
+                    <a
+                        href={link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="block"
                     >
@@ -46,6 +51,10 @@ const ServiceCard = ({ index, title, icon, link }) => {
 };
 
 const Lecturing = () => {
+    const [previewImage, setPreviewImage] = React.useState(null);
+
+    const handleClosePreview = () => setPreviewImage(null);
+
     return (
         <>
             <motion.div variants={textVariant()}>
@@ -63,9 +72,40 @@ const Lecturing = () => {
 
             <div className="mt-20 flex flex-wrap gap-10">
                 {lecturingServices.map((service, index) => (
-                    <ServiceCard key={service.title} index={index} {...service} />
+                    <ServiceCard
+                        key={service.title}
+                        index={index}
+                        {...service}
+                        onClick={() => setPreviewImage(service.icon)}
+                    />
                 ))}
             </div>
+
+            {previewImage && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+                    onClick={handleClosePreview}
+                >
+                    <div
+                        className="relative max-w-3xl w-[90%] max-h-[90vh] bg-tertiary rounded-2xl p-4 flex flex-col items-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            type="button"
+                            onClick={handleClosePreview}
+                            className="absolute right-3 top-3 text-white text-xl leading-none px-2"
+                            aria-label="Close image preview"
+                        >
+                            ×
+                        </button>
+                        <img
+                            src={previewImage}
+                            alt="Lecturing tech stack preview"
+                            className="max-h-[80vh] w-auto object-contain rounded-xl"
+                        />
+                    </div>
+                </div>
+            )}
         </>
     );
 };

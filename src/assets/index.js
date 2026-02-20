@@ -16,6 +16,14 @@ import teachingTechStack2 from "./teaching-tech-stack/2.png";
 import teachingTechStack3 from "./teaching-tech-stack/3.png";
 import teachingTechStack4 from "./teaching-tech-stack/4.png";
 import teachingTechStack5 from "./teaching-tech-stack/5.png";
+import teachingTechStack6 from "./teaching-tech-stack/6.png";
+import teachingTechStack7 from "./teaching-tech-stack/7.png";
+import teachingTechStack8 from "./teaching-tech-stack/8.png";
+import teachingTechStack9 from "./teaching-tech-stack/9.png";
+import teachingTechStack10 from "./teaching-tech-stack/10.png";
+import teachingTechStack11 from "./teaching-tech-stack/11.png";
+import teachingTechStack12 from "./teaching-tech-stack/12.png";
+import teachingTechStack13 from "./teaching-tech-stack/13.png";
 
 // Lecturing section tech-stack (1-5)
 import lecturingTechStack1 from "./lecturing-tech-stack/1.png";
@@ -43,9 +51,9 @@ import playingBassTechStack15 from "./playing-bass-tech-stack/this-cold.png";
 import playingBassTechStack16 from "./playing-bass-tech-stack/watching-the-wheels.png";
 
 // More section tech-stack (1-5)
-import MoreTechStack1 from "./more-tech-stack/1.png";
-import MoreTechStack2 from "./more-tech-stack/2.png";
-import MoreTechStack3 from "./more-tech-stack/3.png";
+import MoreTechStack1 from "./more-tech-stack/the-cat-that-only-wanted-pajamas.png";
+import MoreTechStack2 from "./more-tech-stack/drinks-seller-and-the-horse.png";
+import MoreTechStack3 from "./more-tech-stack/dinner-time-sock.png";
 
 // Import common assets
 import logo from "./logo.png";
@@ -66,6 +74,14 @@ export {
   teachingTechStack3,
   teachingTechStack4,
   teachingTechStack5,
+  teachingTechStack6,
+  teachingTechStack7,
+  teachingTechStack8,
+  teachingTechStack9,
+  teachingTechStack10,
+  teachingTechStack11,
+  teachingTechStack12,
+  teachingTechStack13,
   lecturingTechStack1,
   lecturingTechStack2,
   lecturingTechStack3,
