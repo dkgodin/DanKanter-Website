@@ -17,9 +17,6 @@ import {
   teachingTechStack13,
   lecturingTechStack1,
   lecturingTechStack2,
-  lecturingTechStack3,
-  lecturingTechStack4,
-  lecturingTechStack5,
   playingBassTechStack1,
   playingBassTechStack2,
   playingBassTechStack3,
@@ -102,9 +99,6 @@ export const teachingServices = [
 export const lecturingServices = [
   { title: "Lecturing 1", icon: lecturingTechStack1 },
   { title: "Lecturing 2", icon: lecturingTechStack2 },
-  { title: "Lecturing 3", icon: lecturingTechStack3 },
-  { title: "Lecturing 4", icon: lecturingTechStack4 },
-  { title: "Lecturing 5", icon: lecturingTechStack5 },
 ];
 
 export const playingBassServices = [

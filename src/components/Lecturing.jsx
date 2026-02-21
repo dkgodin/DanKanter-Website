@@ -55,6 +55,15 @@ const Lecturing = () => {
 
     const handleClosePreview = () => setPreviewImage(null);
 
+    // Lock body scroll when preview is open so site scroll doesn't overlap the image
+    React.useEffect(() => {
+        if (previewImage) {
+            const prev = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+            return () => { document.body.style.overflow = prev; };
+        }
+    }, [previewImage]);
+
     return (
         <>
             <motion.div variants={textVariant()}>
@@ -83,17 +92,17 @@ const Lecturing = () => {
 
             {previewImage && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 min-h-[100dvh] min-w-full overflow-auto overscroll-contain"
                     onClick={handleClosePreview}
                 >
                     <div
-                        className="relative max-w-3xl w-[90%] max-h-[90vh] bg-tertiary rounded-2xl p-4 flex flex-col items-center"
+                        className="relative flex flex-col items-center justify-center max-h-[85dvh] max-w-[min(90vw,48rem)] w-full bg-tertiary rounded-2xl p-4 box-border"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             type="button"
                             onClick={handleClosePreview}
-                            className="absolute right-3 top-3 text-white text-xl leading-none px-2"
+                            className="absolute -top-1 -right-1 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white text-black text-2xl leading-none font-light hover:bg-white/90 active:bg-white/80 touch-manipulation shadow-lg"
                             aria-label="Close image preview"
                         >
                             ×
@@ -101,7 +110,7 @@ const Lecturing = () => {
                         <img
                             src={previewImage}
                             alt="Lecturing tech stack preview"
-                            className="max-h-[80vh] w-auto object-contain rounded-xl"
+                            className="max-h-[75dvh] max-w-full w-auto h-auto object-contain rounded-xl"
                         />
                     </div>
                 </div>

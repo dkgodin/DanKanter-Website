@@ -28,9 +28,6 @@ import teachingTechStack13 from "./teaching-tech-stack/13.png";
 // Lecturing section tech-stack (1-5)
 import lecturingTechStack1 from "./lecturing-tech-stack/1.png";
 import lecturingTechStack2 from "./lecturing-tech-stack/2.png";
-import lecturingTechStack3 from "./lecturing-tech-stack/3.png";
-import lecturingTechStack4 from "./lecturing-tech-stack/4.png";
-import lecturingTechStack5 from "./lecturing-tech-stack/5.png";
 
 // Playing Bass section tech-stack (1-5)
 import playingBassTechStack1 from "./playing-bass-tech-stack/angry-again.png";
@@ -84,9 +81,6 @@ export {
   teachingTechStack13,
   lecturingTechStack1,
   lecturingTechStack2,
-  lecturingTechStack3,
-  lecturingTechStack4,
-  lecturingTechStack5,
   playingBassTechStack1,
   playingBassTechStack2,
   playingBassTechStack3,
