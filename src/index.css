@@ -14,8 +14,9 @@
 }
 
 .hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
+  /* Offset in-page anchors for the fixed navbar (no extra gap). */
+  margin-top: -56px;
+  padding-bottom: 56px;
   display: block;
 }
 
