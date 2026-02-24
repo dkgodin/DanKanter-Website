@@ -96,13 +96,13 @@ const Lecturing = () => {
                     onClick={handleClosePreview}
                 >
                     <div
-                        className="relative flex flex-col items-center justify-center max-h-[85dvh] max-w-[min(90vw,48rem)] w-full bg-tertiary rounded-2xl p-4 box-border"
+                        className="relative flex flex-col items-center justify-center max-h-[85dvh] max-w-[min(90vw,48rem)] w-full bg-tertiary rounded-2xl p-4 pt-16 box-border"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             type="button"
                             onClick={handleClosePreview}
-                            className="absolute -top-1 -right-1 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white text-black text-2xl leading-none font-light hover:bg-white/90 active:bg-white/80 touch-manipulation shadow-lg"
+                            className="absolute top-3 right-3 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white text-black text-2xl leading-none font-light hover:bg-white/90 active:bg-white/80 touch-manipulation shadow-lg"
                             aria-label="Close image preview"
                         >
                             ×
