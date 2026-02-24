@@ -101,7 +101,7 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
             <div
-              className={`absolute top-14 left-2 right-2 z-10 rounded-xl bg-primary border border-secondary shadow-lg px-3 py-2 max-h-[80vh] overflow-y-auto w-auto min-w-[200px] ${
+              className={`absolute top-14 left-2 right-2 z-10 rounded-xl bg-primary border border-secondary shadow-lg px-3 py-2 max-h-[calc(100vh-3.5rem-0.5rem)] overflow-y-auto w-auto min-w-[200px] ${
                 toggle ? 'flex' : 'hidden'
               }`}
             >
