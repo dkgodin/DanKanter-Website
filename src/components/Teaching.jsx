@@ -5,6 +5,7 @@ import { teachingServices } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
+import { useScrollLock } from '../utils/scrollLock';
 
 const ServiceCard = ({ index, title, icon, link, onClick }) => {
     const isClickable = Boolean(link || onClick);
@@ -55,14 +56,7 @@ const Teaching = () => {
 
     const handleClosePreview = () => setPreviewImage(null);
 
-    // Lock body scroll when preview is open so site scroll doesn't overlap the image
-    React.useEffect(() => {
-        if (previewImage) {
-            const prev = document.body.style.overflow;
-            document.body.style.overflow = 'hidden';
-            return () => { document.body.style.overflow = prev; };
-        }
-    }, [previewImage]);
+    useScrollLock(Boolean(previewImage));
 
     return (
         <>

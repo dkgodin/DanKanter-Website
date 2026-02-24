@@ -3,16 +3,37 @@ import { Link } from 'react-router-dom';
 import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
+import { useScrollLock } from '../utils/scrollLock';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
 
+  useScrollLock(toggle);
+
   const containerRef = useRef(null);
   const brandRef = useRef(null);
   const hamburgerRef = useRef(null);
   const measureNavRef = useRef(null);
+
+  useEffect(() => {
+    if (!toggle) return;
+
+    const handlePointerDown = (e) => {
+      const root = hamburgerRef.current;
+      if (!root) return;
+
+      if (!root.contains(e.target)) {
+        setToggle(false);
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown, true);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown, true);
+    };
+  }, [toggle]);
 
   const renderNavLinks = (isMobileMenu = false) => (
     <ul
