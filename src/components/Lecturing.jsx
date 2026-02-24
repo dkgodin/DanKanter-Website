@@ -92,11 +92,11 @@ const Lecturing = () => {
 
             {previewImage && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 min-h-[100dvh] min-w-full overflow-auto overscroll-contain"
+                    className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 px-4 pt-24 pb-6 min-h-[100dvh] min-w-full overflow-auto overscroll-contain"
                     onClick={handleClosePreview}
                 >
                     <div
-                        className="relative flex flex-col items-center justify-center max-h-[85dvh] max-w-[min(90vw,48rem)] w-full bg-tertiary rounded-2xl p-4 pt-16 box-border"
+                        className="relative flex flex-col items-center justify-center max-h-[calc(100dvh-7rem)] max-w-[min(90vw,48rem)] w-full bg-tertiary rounded-2xl p-4 pt-16 box-border"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
@@ -110,7 +110,7 @@ const Lecturing = () => {
                         <img
                             src={previewImage}
                             alt="Lecturing tech stack preview"
-                            className="max-h-[75dvh] max-w-full w-auto h-auto object-contain rounded-xl"
+                            className="max-h-[calc(100dvh-11rem)] max-w-full w-auto h-auto object-contain rounded-xl"
                         />
                     </div>
                 </div>
