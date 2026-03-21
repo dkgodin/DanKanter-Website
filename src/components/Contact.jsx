@@ -110,7 +110,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={`xl:mt-12 flex justify-center overflow-hidden`}>
+    <div className={`xl:mt-12 flex flex-col items-center overflow-hidden`}>
       <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl w-full max-w-3xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact Me</h3>
@@ -192,6 +192,7 @@ const Contact = () => {
           {confirmation && <p className="text-green-500">{confirmation}</p>}
         </form>
       </motion.div>
+      <p className="text-sm text-gray-400 mt-4 text-center">Developed by Itzik Shabtay</p>
 
 
     </div>
