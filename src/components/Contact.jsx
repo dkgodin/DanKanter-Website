@@ -69,6 +69,16 @@ const Contact = () => {
       return;
     }
 
+    const missingEnv = [];
+    if (!EMAILJS_SERVICE_ID) missingEnv.push("VITE_EMAILJS_SERVICE_ID");
+    if (!EMAILJS_TEMPLATE_ID) missingEnv.push("VITE_EMAILJS_TEMPLATE_ID");
+    if (!EMAILJS_PUBLIC_KEY) missingEnv.push("VITE_EMAILJS_PUBLIC_KEY");
+
+    if (missingEnv.length > 0) {
+      setConfirmation(`Email is not configured (${missingEnv.join(", ")} missing).`);
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -99,13 +109,20 @@ const Contact = () => {
       .catch((error) => {
         setLoading(false);
         const errorReason = error?.text || error?.message || "unknown error";
+        const accountMismatch =
+          typeof errorReason === "string" &&
+          errorReason.toLowerCase().includes("account not found");
         console.error("EmailJS send failed", {
           serviceId: EMAILJS_SERVICE_ID,
           templateId: EMAILJS_TEMPLATE_ID,
           hasPublicKey: Boolean(EMAILJS_PUBLIC_KEY),
           error,
         });
-        setConfirmation(`Could not send your message (${errorReason}). Please try again.`);
+        setConfirmation(
+          accountMismatch
+            ? "Could not send your message (EmailJS account not found). Check production VITE_EMAILJS_* secrets."
+            : `Could not send your message (${errorReason}). Please try again.`
+        );
       });
   };
 
