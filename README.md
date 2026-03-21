@@ -62,7 +62,7 @@ The site deploys on every push to `main`. **One-time setup (no branch to choose)
 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/dankanter/dan-kanter-website
+git clone https://github.com/dkgodin/DanKanter-Website.git
 ```
 
 2️⃣ Navigate to project directory:
@@ -133,6 +133,8 @@ npm run dev
 
 - ✉️ Email Integration
   - Contact form using EmailJS
+ 
+## Developed by Itzik Shabtay
 
 ## 📄 License
 
