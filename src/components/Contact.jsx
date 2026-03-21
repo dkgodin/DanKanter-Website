@@ -7,6 +7,13 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import "../index.css";
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const TO_EMAIL = 'dkgodingreengiant@gmail.com';
+const TO_NAME = 'Dan Kanter';
+
 const InputField = ({ label, value, onChange, placeholder, name, type }) => (
   <label className="flex flex-col">
     <span className="text-white font-medium mb-4">{label}</span>
@@ -66,16 +73,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Dan Kanter",
+          to_name: TO_NAME,
           from_email: form.email,
-          to_email: "dkgodingreengiant@gmail.com",
+          to_email: TO_EMAIL,
           message: form.message,
         },
-        "p-gXzzyvEhPaJ0XA-"
+        EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -91,8 +98,14 @@ const Contact = () => {
       )
       .catch((error) => {
         setLoading(false);
-        console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+        const errorReason = error?.text || error?.message || "unknown error";
+        console.error("EmailJS send failed", {
+          serviceId: EMAILJS_SERVICE_ID,
+          templateId: EMAILJS_TEMPLATE_ID,
+          hasPublicKey: Boolean(EMAILJS_PUBLIC_KEY),
+          error,
+        });
+        setConfirmation(`Could not send your message (${errorReason}). Please try again.`);
       });
   };
 
