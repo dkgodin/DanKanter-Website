@@ -44,17 +44,24 @@ const Navbar = () => {
       {navLinks.map((link) => (
         <li
           key={link.id}
-          className={`${active === link.title ? 'text-white' : 'text-secondary'} hover:text-white text-[16px] sm:text-[20px] font-medium cursor-pointer px-2 py-1 ${
-            isMobileMenu ? 'w-full text-left border-b border-secondary last:border-b-0' : ''
-          }`}
-          onClick={() => {
-            setActive(link.title);
-            if (isMobileMenu) {
-              setToggle(false);
-            }
-          }}
+          className={`${isMobileMenu ? 'w-full text-left border-b border-secondary last:border-b-0' : ''}`}
         >
-          <a href={`#${link.id}`}>{link.title}</a>
+          <a
+            href={`#${link.id}`}
+            className={`${
+              active === link.title ? 'text-white' : 'text-secondary'
+            } hover:text-white text-[16px] sm:text-[20px] font-medium cursor-pointer ${
+              isMobileMenu ? 'block w-full px-2 py-2' : 'inline-block px-2 py-1'
+            }`}
+            onClick={() => {
+              setActive(link.title);
+              if (isMobileMenu) {
+                setToggle(false);
+              }
+            }}
+          >
+            {link.title}
+          </a>
         </li>
       ))}
     </ul>
